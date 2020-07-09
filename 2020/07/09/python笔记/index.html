@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>python笔记 | Hexo</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-    
-    <!-- <meta name="keywords" content="">
-    <meta name="description" content=""> -->
-  
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="01.初步内容python运行:python XX.py 直接文件名注释:#空格开头,三”””注释多行IPython: python内置编辑Jupyter Notebook : web端编辑器 12pip install jupyterjupyter notebook">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python笔记">
+<meta property="og:url" content="http://yoursite.com/2020/07/09/python%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="01.初步内容python运行:python XX.py 直接文件名注释:#空格开头,三”””注释多行IPython: python内置编辑Jupyter Notebook : web端编辑器 12pip install jupyterjupyter notebook">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-07-08T16:54:18.000Z">
+<meta property="article:modified_time" content="2020-07-08T16:58:56.133Z">
 <meta property="article:author" content="hang">
 <meta name="twitter:card" content="summary">
   
@@ -184,25 +184,25 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-
-  
-    <article id="post-python笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-python笔记" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/07/09/python%E7%AC%94%E8%AE%B0/" target="_blank">python笔记</a>
-  
+    <h1 class="article-title" itemprop="name">
+      python笔记
     </h1>
   
 
 
   
   
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
 <a href="/2020/07/09/python%E7%AC%94%E8%AE%B0/" class="archive-article-date">
         <time datetime="2020-07-08T16:54:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-09</time>
 </a>
@@ -210,6 +210,27 @@
   
   
     
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">1.3k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">5分</span>
+    </span>
+  </span>
+</div>
+
 
   
   </header>
@@ -218,13 +239,186 @@
     
     <h3 id="01-初步内容"><a href="#01-初步内容" class="headerlink" title="01.初步内容"></a>01.初步内容</h3><p>python运行:python XX.py 直接文件名<br>注释:#空格开头,三”””注释多行<br><em>IPython</em>: python内置编辑<br>Jupyter Notebook : web端编辑器</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install jupyter</span><br><span class="line">jupyter notebook</span><br></pre></td></tr></table></figure>
-    
-    <a class="article-more-a" href="/2020/07/09/python%E7%AC%94%E8%AE%B0/#more">more >></a>
-    
-    
+<a id="more"></a>
+<h3 id="02-语言元素"><a href="#02-语言元素" class="headerlink" title="02.语言元素"></a>02.语言元素</h3><p>变量类型:</p>
+<blockquote>
+<p><strong>整型</strong>:python2有int,long,3只有int,0b100二进制,0o100八进制,100十进制,0x100十六进制<br><strong>浮点</strong>,小数支持科学计数1.23e2<br><strong>字符</strong>:单/双引号,三个单/双引号多行字符<br><strong>布尔</strong>:大写开头<br><strong>复数</strong>:3+5j,虚数</p>
+</blockquote>
+<p>变量规则:</p>
+<blockquote>
+<p>数字不能开头</p>
+</blockquote>
+<p>PEP 8要求：</p>
+<blockquote>
+<p>用小写字母拼写，多个单词用下划线连接。<br>受保护的实例属性用单个下划线开头（后面会讲到）。<br>私有的实例属性用两个下划线开头（后面会讲到）。</p>
+</blockquote>
+<p>数据类型相关:</p>
+<blockquote>
+<p>type(a)获取类型<br>int(),float(),str(),chr()数转字符,ord()字符转数字,转换类型<br>身份运算符:is ,is not<br>成员运算符:in,not in<br>逻辑运算符:not,or,and</p>
+</blockquote>
+<h3 id="03-分支结构"><a href="#03-分支结构" class="headerlink" title="03.分支结构"></a>03.分支结构</h3><pre><code>if XXXX:
+elif XX:
+else:</code></pre><h3 id="04-循环结构"><a href="#04-循环结构" class="headerlink" title="04.循环结构"></a>04.循环结构</h3><pre><code>for x in range(10):0-9
+range(1,101):1-100
+range(1,101,2):步长2,range(100,0,-2)
+while循环:
+    break/continue中断</code></pre><h3 id="05-程序逻辑"><a href="#05-程序逻辑" class="headerlink" title="05.程序逻辑"></a>05.程序逻辑</h3><h3 id="06-函数"><a href="#06-函数" class="headerlink" title="06.函数"></a>06.函数</h3><pre><code>def fun(num):
+    return result</code></pre><p>方法参数,可定义预设,可以顺序不同,方法没有重载,后面会覆盖前面得定义</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">def roll_dice(n&#x3D;2):</span><br></pre></td></tr></table></figure>
+<p>可变参数,方法内遍历args</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">def add(*args):</span><br></pre></td></tr></table></figure>
+<p>非本模块运行,不会调用一下方法,导入不运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br></pre></td></tr></table></figure>
+<p>作用域:</p>
+<blockquote>
+<p>Python查找一个变量时会按照“<strong><em>局部作用域</em></strong>”、“<strong><em>嵌套作用域</em></strong>”、“<strong><em>全局作用域</em></strong>”和“<strong><em>内置作用域</em></strong>”的顺序进行搜索<br>方法内指定<strong><em>global</em></strong> a  全局作用域变量,<strong><em>nonlocal</em></strong>嵌套作用域</p>
+</blockquote>
+<h3 id="07-字符串和常用数据结构"><a href="#07-字符串和常用数据结构" class="headerlink" title="07.字符串和常用数据结构"></a>07.字符串和常用数据结构</h3><p>[x:y:z]     x:开始,从0开始,y:结束位置,不包含,z:步长,-1反转字符:</p>
+<ul>
+<li>\转义字符</li>
+<li>+连接</li>
+<li>*重复输出</li>
+<li>in,not in 是否包含</li>
+<li>[]和[:]获取切片  切片操作: <strong>[x:y:z]     x:开始,从0开始,y:结束位置,不包含,z:步长,-1反转字符</strong></li>
+</ul>
+<p><strong>格式化输出</strong>:</p>
+<pre><code>print(&apos;%d * %d = %d&apos; % (a, b, a * b))
+print(&apos;{0} * {1} = {2}&apos;.format(a, b, a * b))字符格式化
+print(f&apos;{a} * {b} = {a * b}&apos;) 3.6之后,直接写参数</code></pre><p><strong><em>列表</em></strong>list()<br><code>[]</code><br><strong><em>字典</em></strong>dict<br><code>{a:b}</code><br><strong><em>元组</em></strong>类似列表,初始化之后不能修改<br><code>()</code><br><strong><em>集合</em></strong>set(),相当于set,不能重复,可以计算交并差,可使用符号&amp;|-^<br><code>{}</code></p>
+<p><strong>生成式和生成器</strong></p>
+<blockquote>
+<p>生成式,直接生成对应对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f &#x3D; [x for x in range(1, 10)]</span><br></pre></td></tr></table></figure>
+<p>生成器,不执行,只有使用再执行,创建不是列表,是生成器对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f &#x3D; (x ** 2 for x in range(1, 1000))</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="08-面向对象编程基础"><a href="#08-面向对象编程基础" class="headerlink" title="08.面向对象编程基础"></a>08.面向对象编程基础</h3><p>python对象默认可见性都可访问,不同于java,没有访问控制,绝对相信开发者,但是可以用__ 开头,隐藏属性名</p>
+<pre><code>class Student(object):
+    def __init__(self, name, age):</code></pre><p>属性都可以访问,可以__开头隐藏,<br>person = Person(‘王大锤’, 22)创建对象</p>
+<h3 id="09-面向对象进阶"><a href="#09-面向对象进阶" class="headerlink" title="09.面向对象进阶"></a>09.面向对象进阶</h3><pre><code>@property,属性get
+@age.setter,属性修改器
+__slots__ = (&apos;_name&apos;, &apos;_age&apos;, &apos;_gender&apos;)限定绑定属性,防止语言的动态绑定其他属性
+
+
+@staticmethod 静态方法
+
+@classmethod类对象,cls固定,可以创建对象
+def now(cls):
+
+继承:
+    class Student(Person):</code></pre><h3 id="11-文件和异常"><a href="#11-文件和异常" class="headerlink" title="11.文件和异常"></a>11.文件和异常</h3><pre><code>r读,w写,a追加,w+ +代表读和写,具体查询,b二进制(例如:rb,wb)
+f = open(&apos;致橡树.txt&apos;, &apos;r&apos;, encoding=&apos;utf-8&apos;)
+print(f.read())
+f.close()
+
+
+异常:
+    try:
+        with open(&apos;致橡树.txt&apos;, &apos;r&apos;, encoding=&apos;utf-8&apos;) as f:    资源写法,最终会关闭资源
+    except FileNotFoundError:
+    finally:
+
+文件读取另外:
+    1.for line in f:
+    2.lines = f.readlines()
+写入:
+    f.write(XX)
+
+json和字典类型对应,json模块处理
+    dump序列化到文件,dumps到字符串
+    load文件到对象,loads字符串到对象</code></pre><h3 id="13-进程和线程"><a href="#13-进程和线程" class="headerlink" title="13.进程和线程"></a>13.进程和线程</h3><pre><code>python一进程只有一线程工作,io密集型效率更差,差10倍
+多进程:
+    1.from multiprocessing import Process
+    p1 = Process(target=download_task, args=(&apos;Python从入门到住院.pdf&apos;, ))
+    传入方法参数
+    2.继承Process,重写run
+通信使用multiprocessing的类,因为子进程复制父进程所有属性
+
+
+多线程:
+from threading import Thread,Lock
+self._lock = Lock()
+global 属性多线程可通信</code></pre><h3 id="15-图像和办公文档处理"><a href="#15-图像和办公文档处理" class="headerlink" title="15.图像和办公文档处理"></a>15.图像和办公文档处理</h3><pre><code>图像:pillow(PIL) image类 from PIL import Image
+Excel电子表格:openpyxl
+Word:python-docx
+PDF:</code></pre><h3 id="16-Python语言进阶"><a href="#16-Python语言进阶" class="headerlink" title="16.Python语言进阶"></a>16.Python语言进阶</h3><pre><code>生成式（推导式）的用法
+prices2 = {key: value for key, value in prices.items() if value &gt; 100}
+
+
+heapq模块（堆排序）nlargest,nsmallest获取列表排序按元素属性也可以
+print(heapq.nlargest(2, list2, key=lambda x: x[&apos;price&apos;]))
+
+itertools模块,全排列,组合,笛卡尔积,无限序列
+
+collections模块</code></pre><h3 id="17-部分常用语法使用示例"><a href="#17-部分常用语法使用示例" class="headerlink" title="17.部分常用语法使用示例:"></a>17.部分常用语法使用示例:</h3><p>获取类型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type(a)</span><br></pre></td></tr></table></figure>
+<p>获取输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x &#x3D; int(input(&#39;x&#x3D;&#39;))</span><br></pre></td></tr></table></figure>
+<p>x将y的值赋给x, 将x的值赋给y</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x,y &#x3D; y,x</span><br><span class="line">(x, y) &#x3D; (y, x) if x &gt; y else (x, y)</span><br></pre></td></tr></table></figure>
+<p>**3,次方乘法</p>
+<p>三元表达式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">return True if num !&#x3D; 1 else False</span><br></pre></td></tr></table></figure>
+<p>pass为空语句,不做任何工作</p>
+<p><code>print(s1, s2, s3, end=&#39;&#39;)</code>不换行,end参数决定print的最后输出,默认换行因为end=’\n’</p>
+<p>字符:<br>长度:<code>len(str1)</code><br>首字母大写:<code>str1.capitalize()</code></p>
 
     
 
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/weixin.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          hang
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://yoursite.com/2020/07/09/python笔记/" title="python笔记" target="_blank">http://yoursite.com/2020/07/09/python笔记/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
     
 
   </div>
@@ -234,16 +428,76 @@
     
 
     
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/07/09/python%E7%AC%94%E8%AE%B0/">展开全文 >></a>
-    </p>
+
     
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/09/python%E7%AC%94%E8%AE%B0/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
 
     
     <div class="clearfix"></div>
   </div>
   </div>
 </article>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2020/07/01/docker%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">docker笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -264,181 +518,14 @@
 
 
 
-  
-    <article id="post-docker笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/07/01/docker%E7%AC%94%E8%AE%B0/" target="_blank">docker笔记</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/07/01/docker%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2020-06-30T16:15:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-01</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="docker从入门到实践笔记"><a href="#docker从入门到实践笔记" class="headerlink" title="docker从入门到实践笔记"></a>docker从入门到实践笔记</h2><p>主要概念：镜像（    Image    ） 容器（    Container    ） 仓库（    Repository    ）</p>
-<h3 id="1-获取镜像"><a href="#1-获取镜像" class="headerlink" title="1.获取镜像"></a>1.获取镜像</h3><pre><code>docker    pull    [选项]    [Docker    Registry    地址[:端口号]/]仓库名[:标签]
-docker    image    ls
-docker    image    rm    [选项]    &lt;镜像1&gt;    [&lt;镜像2&gt;    ...]
-docker    exec    -it    webserver    bash 可进入容器修改内容
-docker    diff    webserver 
-docker    commit    [选项]    &lt;容器ID或容器名&gt;    [&lt;仓库名&gt;[:&lt;标签&gt;]]
-docker    import 获取解压缩文件作为第一层镜像
-docker    save    alpine    -o    filename 保存镜像文件
-docker    load 读取镜像文件</code></pre>
-    
-    <a class="article-more-a" href="/2020/07/01/docker%E7%AC%94%E8%AE%B0/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/07/01/docker%E7%AC%94%E8%AE%B0/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
 
 
 
 
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/06/22/hello-world/" target="_blank">Hello World</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/06/22/hello-world/" class="archive-article-date">
-        <time datetime="2020-06-22T15:06:37.723Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-22</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/06/22/hello-world/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
 
 
 
 
-  
-  
 
 
           </div>
@@ -478,8 +565,8 @@ docker    load 读取镜像文件</code></pre>
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
