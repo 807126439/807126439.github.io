@@ -19,6 +19,7 @@ tags:
 	docker	import 获取解压缩文件作为第一层镜像
 	docker	save	alpine	-o	filename 保存镜像文件
 	docker	load 读取镜像文件
+	docker	ps 查看运行的容器,	-a 查看所有容器
 
 <!-- more -->
 
