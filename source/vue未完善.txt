@@ -1,0 +1,130 @@
+vue写法（声明式）
+
+创建一个div元素，设置id属性
+定义一个vue对象，将div挂载在vue对象上
+在vue对象内定义变量message，并绑定数据
+将message变量放在div元素上显示
+修改vue对象中的变量message，div元素数据自动改变
+
+v-for
+<li v-for="(item, index) in movies" :key="index">{{item}}</li>
+
+    const app = new Vue({
+      el:"#app",//用于挂载要管理的元素
+      data:{//定义数据
+        message:"你好啊",
+        movies:["星际穿越","海王","大话西游","复仇者联盟"]//定义一个数组
+      }
+    })
+
+    methods:{
+       add:function(){
+        XXX
+       }
+    }
+
+插值操作
+	{{}}不仅可以直接写变量，还可以写简单表达式
+
+v-once
+	<h2 v-once>{{message}}</h2>只渲染一次
+v-html
+	输出成为html渲染样式
+v-text
+	相当于js的innerHTML方法,内容全替换
+v-pre
+	不解析
+v-cloak
+	加载完成则,v-cloak标签移除
+v-bind
+	动态绑定属性<img v-bind:src="imgURL" alt="">
+	可以直接写:src=/:href=
+	:class="{key1:value1,key2:value2}"绑定class
+	:class="[active,line]"
+	:style="{fontSize:fontSize}"绑定style
+
+计算属性(数据联动监听)有缓存,关联不变不会执行
+	      computed: {
+        fullName:function(){
+          return this.firstName + " " + this.lastName
+        }
+      },
+
+监听器(一般一个属性)
+	                watch: {
+                    firstName:function(newFirstName, oldFirstName){
+                        console.log("firstName触发了watch,newFirstName="+newFirstName+",oldFirstName="+oldFirstName)
+                        this.watchFullName = this.firstName+this.lastName+","+other
+                    },
+
+v-on
+	<button v-on:click="count++">加</button>
+	(@为语法简写)@click=  并且方法可以省略()
+v-on的修饰词
+	.stop的使用，btn的click事件不会传播，不会冒泡到上层，调用event.stopPropagation()。
+	.prevent 调用event.preeventDefault阻止默认行为。
+	.enter监听键盘事件
+
+v-if、v-eles、v-else-if,v-show
+
+v-for
+	<li v-for="item in names" >{{item}}</li>
+	<li v-for="(item,index) in names"  >{{index+":"+item}}</li>有索引
+	<li v-for="(value,key,index) in user" >{{key+"-"+value+"-"+index}}</li>遍历对象,有索引
+v-model
+	<input type="text" v-model="message">{{message}}
+	<!-- 输入框内容修改，message也修改，修改message，input内容也修改，双向绑定 -->
+	结合radio,结合checkbox,结合select
+	<select name="fruits" v-model="fruits" multiple>,可以多选
+	修饰符
+	lazy默认情况下是实时更新数据，加上lazy，从输入框失去焦点，按下enter都会更新数据。
+	number,默认是string类型，使用number复制为number类型。
+	trim用于 自动过滤用户输入的首尾空白字符
+
+组件化的基本使用
+	    // 1.创建组件构造器对象
+			const cpnc = Vue.extend({
+			  template:`
+				<div>
+				  <h2>标题</h2>
+				  <p>内容1...<p>
+				  <p>内容2...<p>
+				</div>`
+			})
+			// 2.注册组件
+			Vue.component('my-cpn', cpnc)
+			const app = new Vue({
+			  el:"#app",
+			  data:{
+			  },
+			  components:{//局部组件创建
+				cpnc:cpnc
+			  }
+			})
+		作为自定义元素来使用： <my-cpn></my-cpn>
+
+	<script type="text/x-template" id="cpn1">分离写法
+	<template id="cpn2">标签写法
+	data存放数据的时候使用函数防止作用域溢出
+
+	父子组件属性传递相关
+	
+模块化
+	nodeJS支持
+	导出
+	module.exports = {XXX,XXX},属性,方法等
+	导入
+	var {XX,XX} = require("./aaa")从aaa.js取出对象
+	
+	ES6模块化实现
+	导出
+	<script src="aaa.js" type="module"></script>,模块属性具有作用域
+	export let name = 'XXX'
+	export {XXX,XXX,XXX}
+	导入
+	import {name,XXX} from './aaa.js'
+	
+	export default{XXX,XXX}
+	import aaa from './aaa.js'
+	import * as aaa from './aaa.js'用aaa对象
+	
