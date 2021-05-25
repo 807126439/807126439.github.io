@@ -1,0 +1,7 @@
+sqlite在aarch64架构下找不到动态链接库运行问题,
+查看源码包有对应的C++动态连接库文件
+
+解决方法:
+1.启动指令申明动态连接库地址
+
+2.sudo mount /tmp -o remount,exec
