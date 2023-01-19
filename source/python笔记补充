@@ -1,0 +1,79 @@
+python学习：
+
+循环：
+expression1 if condition else expression2 for item in iterable
+如果没有else语句
+expression for item in iterable if condition
+
+函数内改变全局变量时声明 global a，不然不能获取
+同内部函数获取外部函数变量 nonlocal
+
+闭包，将方法封装成一个变量
+
+匿名函数
+lambda x:x**2
+输入x,输出x**2
+
+对象部分
+常量：平行于方法直接写常量值
+
+私有变量：__name，__开头的变量,外部无法直接访问
+使用dir(e)可以查看改名后的名称，实际是建变量名称改变了，如
+a._Teacher__name可以查看
+
+函数有
+类函数：加注释@classmethod
+第一个参数一般为 cls,最常用的功能是实现不同的 init 构造函数
+
+成员函数：普通函数
+第一个参数 self 代表当前对象的引用
+
+静态函数：加@staticmethod
+而静态函数则与类没有什么关联，最明显的特征便是，静态函数的第一个参数没有任何特殊性
+
+继承：
+class Tiger(Animals):
+不调用构造函数，先调用子类构造函数
+允许多重继承，即同时继承多个类
+
+抽象类：
+from abc import ABCMeta, abstractmethod
+类继承(metaclass=ABCMeta)
+方法加@abstractmethod
+
+模块化：
+from fileName import function,class
+导入分相对路径和绝对路径，推荐从根目录开始
+可修改路径的方法：sys.path.append("..")
+sys.path[0]
+PYTHONHOME
+
+对象：
+==比较值是否相等，is是否同一个对象，比较内存地址
+数字-5到256可用is因为有缓存，超出变成两个对象
+==使用的是a.__eq__(b)
+
+浅拷贝：l1 = list(l2)
+l1l2整体元素不影响，list元素同步修改，元组元素修改会不同，因为替换为新元组
+深拷贝：l1 = copy.deepcopy(l2)
+
+装饰器：
+def decare(func):
+       @functools.wraps(func)
+       def wrapper(*args,**kwargs):
+       return func(*args,**kwargs)
+return wrapper
+用：@decare
+
+多线程：其实是协程
+import asyncio
+方法定义加async def
+await直接执行
+await asyncio.sleep(sleep_time)
+asyncio.run(func())
+task = asyncio.create_task(func())
+await asyncio.gather(*tasks)
+
+上下文管理器
+with 会调用对象的
+__init__()，__enter__()，__exit__()
